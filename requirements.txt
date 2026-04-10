@@ -12,8 +12,7 @@ langchain-community>=0.3
 qdrant-client>=1.9
 sentence-transformers>=3.0
 
-# Reranking
-cohere>=5.0
+# Reranking (uses sentence-transformers CrossEncoder — no extra package needed)
 
 # Data Processing
 pandas>=2.0

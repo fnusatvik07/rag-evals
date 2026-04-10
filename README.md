@@ -218,4 +218,4 @@ Query → Embed → Retrieve → [Rerank] → Generate Answer
 
 - Python 3.10+
 - OpenAI API key
-- Optional: Cohere API key (for reranking)
+- Reranking uses a local cross-encoder model (no extra API key needed)

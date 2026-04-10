@@ -37,7 +37,7 @@ def load_env(dotenv_path: str | None = None) -> dict:
         )
 
     loaded = {}
-    for key in ["OPENAI_API_KEY", "COHERE_API_KEY", "CONFIDENT_API_KEY"]:
+    for key in ["OPENAI_API_KEY", "CONFIDENT_API_KEY"]:
         val = os.getenv(key)
         if val:
             loaded[key] = val
@@ -64,7 +64,7 @@ class RAGConfig:
     ))
     collection_name: str = "acme_corp_kb"
     use_reranker: bool = False
-    reranker_model: str = "rerank-v3.5"
+    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
     @property
     def name(self) -> str:

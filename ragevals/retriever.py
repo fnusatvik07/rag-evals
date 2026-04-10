@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import os
 from .embeddings import get_embeddings
 
 
@@ -51,40 +50,40 @@ def rerank(
     query: str,
     documents: list[dict],
     top_n: int = 3,
-    api_key: str | None = None,
-    model: str = "rerank-v3.5",
+    model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2",
 ) -> list[dict]:
-    """Rerank documents using Cohere.
+    """Rerank documents using a cross-encoder model from sentence-transformers.
 
-    Falls back to returning top_n by original order if no API key.
+    Runs locally — no API key required.
 
     Args:
         query: The search query.
         documents: List of dicts with 'text' key.
         top_n: Number of documents to return.
-        api_key: Cohere API key (falls back to env var).
-        model: Cohere reranker model.
+        model: Cross-encoder model name from HuggingFace.
 
     Returns:
-        Reranked list of document dicts.
+        Reranked list of document dicts (highest relevance first).
     """
-    cohere_key = api_key or os.getenv("COHERE_API_KEY", "")
+    if not documents:
+        return []
 
-    if cohere_key:
-        try:
-            import cohere
-            co = cohere.ClientV2(api_key=cohere_key)
-            doc_texts = [d["text"] for d in documents]
-            response = co.rerank(
-                model=model, query=query, documents=doc_texts, top_n=top_n,
-            )
-            reranked = []
-            for r in response.results:
-                doc = documents[r.index].copy()
-                doc["rerank_score"] = r.relevance_score
-                reranked.append(doc)
-            return reranked
-        except Exception:
-            pass
+    try:
+        from sentence_transformers import CrossEncoder
 
-    return documents[:top_n]
+        cross_encoder = CrossEncoder(model)
+        pairs = [[query, d["text"]] for d in documents]
+        scores = cross_encoder.predict(pairs)
+
+        scored_docs = []
+        for idx, score in enumerate(scores):
+            doc = documents[idx].copy()
+            doc["rerank_score"] = float(score)
+            scored_docs.append(doc)
+
+        scored_docs.sort(key=lambda d: d["rerank_score"], reverse=True)
+        return scored_docs[:top_n]
+
+    except ImportError:
+        # Fallback if sentence-transformers not available.
+        return documents[:top_n]
