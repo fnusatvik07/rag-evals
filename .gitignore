@@ -46,3 +46,6 @@ data/*.parquet
 
 # Qdrant
 qdrant_data/
+
+# DeepEval cache
+.deepeval/
