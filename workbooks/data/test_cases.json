@@ -1,0 +1,66 @@
+[
+  {
+    "query": "What is the return policy for regular items?",
+    "expected_output": "Acme Corp offers a 30-day return policy. Items must be unused, in original packaging, with receipt. Refunds processed in 5-7 business days."
+  },
+  {
+    "query": "What shipping options are available and how much do they cost?",
+    "expected_output": "Standard Shipping (5-7 days, free over $50), Expedited Shipping (2-3 days, $12.99), Overnight Shipping (next day, $24.99 before 2 PM EST)."
+  },
+  {
+    "query": "What are the features of the SmartHome Hub?",
+    "expected_output": "$149.99, WiFi/Bluetooth/Zigbee/Z-Wave, voice control, 5-inch touchscreen, energy monitoring, 10,000+ devices, 2-year warranty."
+  },
+  {
+    "query": "What payment methods do you accept?",
+    "expected_output": "Visa, MasterCard, AmEx, Discover, PayPal, Apple Pay, Google Pay, Gift Cards. Pay Later for orders $200+."
+  },
+  {
+    "query": "How long do I have to return electronics?",
+    "expected_output": "Electronics have a 15-day return window. Must return with all original accessories and packaging. A 15% restocking fee may apply to opened items. Defective electronics can be exchanged within 90 days."
+  },
+  {
+    "query": "Do you ship internationally?",
+    "expected_output": "Yes, ships to 50+ countries. Standard 10-21 days, Express 5-7 days. Customer pays customs duties and import fees."
+  },
+  {
+    "query": "What does the warranty cover on Acme products?",
+    "expected_output": "1-year limited warranty covering defects in materials and workmanship. Does not cover accidents, misuse, or unauthorized modifications. Extended 2-year and 3-year plans available."
+  },
+  {
+    "query": "How can I contact customer support?",
+    "expected_output": "Phone: 1-800-ACME-HELP (M-F 8AM-8PM EST). Email: support@acmecorp.com (24-48hr response). Live chat: M-Sat 9AM-6PM EST. Help center: help.acmecorp.com."
+  },
+  {
+    "query": "How much is the AirPure Pro and what does it filter?",
+    "expected_output": "$299.99. 4-stage filtration: pre-filter, activated carbon, True HEPA H13, UV-C light. Removes 99.97% of particles as small as 0.3 microns. Covers rooms up to 800 sq ft."
+  },
+  {
+    "query": "How does the Acme Rewards program work?",
+    "expected_output": "Free to join. Earn 1 point per dollar spent. 100 points = $5 off. Members get early access to sales, birthday 20% discount, free shipping. Silver tier (500+ points/year): free expedited shipping. Gold tier (1000+ points/year): priority support. Points expire after 12 months of inactivity."
+  },
+  {
+    "query": "Tell me about the Acme ErgoDesk Pro standing desk.",
+    "expected_output": "$599.99, 60x30 inch bamboo desktop, dual-motor height adjustment 25.5-51 inches, 4 programmable presets, cable management, anti-collision tech, 300 lb capacity, 5-year frame warranty."
+  },
+  {
+    "query": "Can I cancel an order after placing it?",
+    "expected_output": "Within 1 hour via customer support or account dashboard Cancel Order button. After 1 hour, order enters processing and may not be cancellable. Shipped orders cannot be cancelled, must be returned. Custom items cannot be cancelled once production begins. Refund to original payment within 3-5 business days."
+  },
+  {
+    "query": "What are the Acme CloudStorage plan options and pricing?",
+    "expected_output": "Basic: 50 GB at $2.99/month. Standard: 200 GB at $5.99/month. Premium: 2 TB at $12.99/month. All plans include encryption, auto backup, 30-day versioning. Premium includes family sharing for up to 5 members. Annual subscriptions save 20%. Business plans start at $8.99/user/month."
+  },
+  {
+    "query": "Does Acme Corp offer same-day delivery?",
+    "expected_output": "Acme Corp does not offer same-day delivery. The fastest shipping option is Overnight Shipping for $24.99, which delivers the next business day for orders placed before 2 PM EST."
+  },
+  {
+    "query": "What is your return policy for regular items?",
+    "expected_output": "30-day return policy, items must be unused in original packaging with receipt. Refunds in 5-7 business days. Customer pays return shipping unless item was defective."
+  },
+  {
+    "query": "What is the battery life of the FitBand Ultra?",
+    "expected_output": "7-day battery life. Also features 1.4-inch AMOLED display, water resistance up to 50 meters (5 ATM), GPS tracking, heart rate, sleep, blood oxygen, and stress monitoring. Compatible with iOS and Android via Acme Health app."
+  }
+]
