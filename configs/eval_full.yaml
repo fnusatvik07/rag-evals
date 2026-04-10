@@ -1,0 +1,113 @@
+# Full RAG Evaluation Configuration
+# Includes ALL metrics from both RAGAS and DeepEval frameworks
+
+evaluation:
+  name: "full_rag_eval"
+  description: "Comprehensive evaluation using all available metrics from RAGAS and DeepEval"
+  datasets:
+    basic: "data/golden_basic.json"
+    adversarial: "data/golden_adversarial.json"
+    multihop: "data/golden_multihop.json"
+    conversational: "data/golden_conversational.json"
+  knowledge_base: "data/knowledge_base.json"
+
+ragas:
+  metrics:
+    # Answer quality metrics
+    - name: "faithfulness"
+      description: "Measures factual consistency of the answer with the retrieved context"
+      threshold: 0.7
+    - name: "answer_relevancy"
+      description: "Measures relevancy of the generated answer to the question"
+      threshold: 0.7
+    - name: "answer_correctness"
+      description: "Measures correctness of the answer against the ground truth reference"
+      threshold: 0.7
+    - name: "answer_similarity"
+      description: "Semantic similarity between the generated answer and the reference answer"
+      threshold: 0.7
+
+    # Context quality metrics
+    - name: "context_precision"
+      description: "Measures precision of retrieved context against the ground truth"
+      threshold: 0.6
+    - name: "context_recall"
+      description: "Measures recall of retrieved context against the ground truth"
+      threshold: 0.6
+    - name: "context_relevancy"
+      description: "Measures relevancy of retrieved context to the question"
+      threshold: 0.6
+    - name: "context_entity_recall"
+      description: "Measures recall of entities from reference answer in the retrieved context"
+      threshold: 0.5
+
+    # Aspect-specific metrics
+    - name: "aspect_critique"
+      description: "Evaluates specific aspects like harmfulness, correctness, coherence"
+      threshold: 0.7
+      parameters:
+        aspects:
+          - "harmfulness"
+          - "correctness"
+          - "coherence"
+
+deepeval:
+  metrics:
+    # Core quality metrics
+    - name: "GEval"
+      description: "LLM-based evaluation of answer quality using customizable criteria"
+      threshold: 0.7
+      parameters:
+        evaluation_criteria: "correctness"
+    - name: "FaithfulnessMetric"
+      description: "Measures whether the response is faithful to the retrieved context"
+      threshold: 0.7
+    - name: "AnswerRelevancyMetric"
+      description: "Measures relevancy of the generated answer to the input query"
+      threshold: 0.7
+    - name: "ContextualPrecisionMetric"
+      description: "Measures precision of the retrieved context for the given query"
+      threshold: 0.6
+    - name: "ContextualRecallMetric"
+      description: "Measures recall of the retrieved context against the ground truth"
+      threshold: 0.6
+    - name: "ContextualRelevancyMetric"
+      description: "Measures how relevant the retrieved context is to the input query"
+      threshold: 0.6
+
+    # Safety and quality metrics
+    - name: "HallucinationMetric"
+      description: "Detects hallucinated content not grounded in the retrieved context"
+      threshold: 0.8
+    - name: "ToxicityMetric"
+      description: "Detects toxic or harmful content in the generated response"
+      threshold: 0.9
+    - name: "BiasMetric"
+      description: "Detects bias in the generated response"
+      threshold: 0.9
+
+    # Conversational metrics
+    - name: "ConversationRelevancyMetric"
+      description: "Measures relevancy of responses in multi-turn conversations"
+      threshold: 0.7
+      dataset: "conversational"
+    - name: "KnowledgeRetentionMetric"
+      description: "Measures ability to retain and use information across conversation turns"
+      threshold: 0.6
+      dataset: "conversational"
+
+    # Summarization metric
+    - name: "SummarizationMetric"
+      description: "Evaluates quality of summarization in generated responses"
+      threshold: 0.6
+
+settings:
+  llm_model: "gpt-4"
+  embedding_model: "text-embedding-3-small"
+  batch_size: 5
+  verbose: true
+  output_format: "json"
+  output_dir: "results/full"
+  parallel_workers: 4
+  retry_on_failure: true
+  max_retries: 3

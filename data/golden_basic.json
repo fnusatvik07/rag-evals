@@ -1,0 +1,127 @@
+[
+  {
+    "query": "What is Acme Corp's return policy?",
+    "reference": "Acme Corp offers a 30-day return policy on all products purchased through the website or retail stores. Items must be unused, in original packaging, and accompanied by the original receipt. Refunds are processed within 5-7 business days. Shipping costs for returns are the customer's responsibility unless the item was defective or wrong. Final Sale items cannot be returned or exchanged.",
+    "category": "return_policy"
+  },
+  {
+    "query": "How long do I have to return electronics?",
+    "reference": "Electronic products have a 15-day return window instead of the standard 30 days. All electronics must be returned with all original accessories, cables, manuals, and packaging. A 15% restocking fee may apply to opened electronics. Defective electronics can be exchanged for the same model within 90 days at no additional cost.",
+    "category": "electronics_returns"
+  },
+  {
+    "query": "What shipping options does Acme Corp offer?",
+    "reference": "Acme Corp offers three domestic shipping options: Standard Shipping (5-7 business days, free for orders over $50), Expedited Shipping (2-3 business days, $12.99), and Overnight Shipping (next business day if ordered before 2 PM EST, $24.99). Orders are processed within 1-2 business days and tracking information is sent via email.",
+    "category": "shipping"
+  },
+  {
+    "query": "Does Acme Corp ship internationally?",
+    "reference": "Yes, Acme Corp ships internationally to over 50 countries. International Standard Shipping takes 10-21 business days with costs varying by destination. International Express Shipping takes 5-7 business days. All international orders may be subject to customs duties, taxes, and import fees which are the customer's responsibility.",
+    "category": "international_shipping"
+  },
+  {
+    "query": "What does the product warranty cover?",
+    "reference": "All Acme Corp branded products come with a 1-year limited warranty covering defects in materials and workmanship under normal use. The warranty does not cover damage from accidents, misuse, unauthorized modifications, or normal wear and tear. Extended warranty plans (2-year and 3-year) are available for purchase at the time of original purchase.",
+    "category": "warranty"
+  },
+  {
+    "query": "How can I contact Acme Corp customer support?",
+    "reference": "Acme Corp customer support is available through multiple channels: Phone support at 1-800-ACME-HELP (1-800-226-3435) Monday-Friday 8 AM-8 PM EST, email at support@acmecorp.com with 24-48 hour response time, and live chat on the website Monday-Saturday 9 AM-6 PM EST.",
+    "category": "customer_support"
+  },
+  {
+    "query": "What are the features of the SmartHome Hub?",
+    "reference": "The Acme SmartHome Hub ($149.99) is a home automation controller supporting WiFi, Bluetooth, Zigbee, and Z-Wave protocols, compatible with over 10,000 smart home devices. Features include voice control via built-in microphones, a 5-inch touchscreen display, energy monitoring dashboard, and automated routines. It comes with a 2-year warranty.",
+    "category": "product_smarthome"
+  },
+  {
+    "query": "Tell me about the AirPure Pro air purifier.",
+    "reference": "The Acme AirPure Pro ($299.99) is a premium air purifier for rooms up to 800 square feet. It features a 4-stage filtration system: pre-filter, activated carbon filter, True HEPA H13 filter, and UV-C light sanitizer. It removes 99.97% of particles as small as 0.3 microns and operates at noise levels as low as 24 dB on sleep mode.",
+    "category": "product_airpure"
+  },
+  {
+    "query": "What payment methods does Acme Corp accept?",
+    "reference": "Acme Corp accepts Visa, MasterCard, American Express, Discover, PayPal, Apple Pay, Google Pay, and Acme Gift Cards. For orders over $200, Acme Pay Later is available, splitting payments into 4 interest-free installments over 6 weeks. All payment information is encrypted using 256-bit SSL encryption.",
+    "category": "payment"
+  },
+  {
+    "query": "How does the Acme Rewards loyalty program work?",
+    "reference": "The Acme Rewards program is free to join and earns 1 point per dollar spent. 100 points equals $5 off. Benefits include early access to sales, 20% birthday discount, and free standard shipping. Silver tier (500+ points/year) adds free expedited shipping. Gold tier (1000+ points/year) adds priority support and exclusive product previews. Points expire after 12 months of account inactivity.",
+    "category": "loyalty"
+  },
+  {
+    "query": "Can I cancel my order after placing it?",
+    "reference": "Orders can be cancelled within 1 hour of placement via customer support or the Cancel Order button in your account dashboard. After 1 hour, orders may not be cancellable as they enter the processing queue. Shipped orders cannot be cancelled and must go through the standard return process. Custom or personalized items cannot be cancelled once production has begun. Refunds for cancelled orders take 3-5 business days.",
+    "category": "order_cancellation"
+  },
+  {
+    "query": "What are the specifications of the ErgoDesk Pro?",
+    "reference": "The Acme ErgoDesk Pro ($599.99) is a motorized standing desk with a 60x30 inch bamboo desktop, dual-motor height adjustment from 25.5 to 51 inches, 4 programmable height presets, built-in cable management tray, and anti-collision technology. It supports up to 300 lbs and adjusts at 1.5 inches per second. It has a 5-year warranty on frame/motors and 2-year warranty on electronics/desktop.",
+    "category": "product_ergodesk"
+  },
+  {
+    "query": "What health metrics does the FitBand Ultra track?",
+    "reference": "The Acme FitBand Ultra ($79.99) monitors heart rate, steps, sleep quality, blood oxygen levels, and stress. It features a 1.4-inch AMOLED display, 7-day battery life, water resistance up to 50 meters (5 ATM), and GPS tracking for outdoor workouts. It syncs with the Acme Health app for detailed analytics and personalized health insights.",
+    "category": "product_fitband"
+  },
+  {
+    "query": "How much does Acme CloudStorage cost?",
+    "reference": "Acme CloudStorage plans are: Basic (50 GB) at $2.99/month, Standard (200 GB) at $5.99/month, and Premium (2 TB) at $12.99/month. All plans include end-to-end encryption, automatic backup, and file versioning for the last 30 days. Premium includes sharing with up to 5 family members. Annual subscriptions save 20%.",
+    "category": "product_cloudstorage"
+  },
+  {
+    "query": "How do I request deletion of my personal data?",
+    "reference": "Customers can request data deletion by contacting privacy@acmecorp.com. Acme Corp collects personal information including name, email, shipping address, payment information, and browsing behavior. They do not sell personal information to third parties and comply with GDPR, CCPA, and other applicable data protection regulations.",
+    "category": "privacy"
+  },
+  {
+    "query": "How do international returns work?",
+    "reference": "The knowledge base states that Acme Corp offers a 30-day return policy on all products. For returns, items must be unused, in original packaging, with receipt. Shipping costs for returns are the customer's responsibility unless the item was defective or wrong. The knowledge base does not provide specific details about international return shipping procedures or costs beyond the general return policy.",
+    "category": "international_returns"
+  },
+  {
+    "query": "What are the extended warranty plan options and costs?",
+    "reference": "Extended warranty plans are available in 2-year and 3-year options, purchasable at the time of original purchase for an additional fee. The knowledge base does not specify the exact cost of extended warranty plans. The standard warranty is 1 year covering defects in materials and workmanship under normal use.",
+    "category": "extended_warranty"
+  },
+  {
+    "query": "When do my loyalty points expire?",
+    "reference": "Acme Rewards points expire after 12 months of account inactivity. As long as you make a purchase or earn/redeem points within a 12-month period, your points will remain active. The program earns 1 point per dollar spent and 100 points equals $5 off.",
+    "category": "loyalty_expiry"
+  },
+  {
+    "query": "What is the cutoff time for overnight shipping?",
+    "reference": "Overnight Shipping delivers the next business day if the order is placed before 2 PM EST. Overnight Shipping costs $24.99. Orders are processed within 1-2 business days, but the 2 PM EST cutoff applies specifically to overnight delivery guarantees.",
+    "category": "shipping_cutoff"
+  },
+  {
+    "query": "Who qualifies for Acme Pay Later?",
+    "reference": "Acme Pay Later is available for orders over $200. It is a buy-now-pay-later option that splits payments into 4 interest-free installments over 6 weeks. The knowledge base does not specify additional credit check requirements or eligibility criteria beyond the $200 minimum order amount.",
+    "category": "payment_paylater"
+  },
+  {
+    "query": "What exactly does the ErgoDesk Pro warranty cover?",
+    "reference": "The ErgoDesk Pro comes with a 5-year warranty on the frame and motors, and a 2-year warranty on the electronics and desktop surface. This is notably longer than the standard 1-year Acme Corp product warranty. The general warranty covers defects in materials and workmanship under normal use but does not cover accidents, misuse, unauthorized modifications, or normal wear and tear.",
+    "category": "ergodesk_warranty"
+  },
+  {
+    "query": "Can I check my Acme gift card balance?",
+    "reference": "The knowledge base confirms that Acme Gift Cards are accepted as a payment method, but it does not provide specific information on how to check a gift card balance. Customers may want to contact customer support at 1-800-ACME-HELP or email support@acmecorp.com for gift card balance inquiries.",
+    "category": "gift_card"
+  },
+  {
+    "query": "How do I track my order?",
+    "reference": "Tracking information is sent via email once the package has been shipped. Orders are processed within 1-2 business days. For further assistance with order tracking, customers can contact Acme Corp customer support by phone at 1-800-ACME-HELP (Monday-Friday 8 AM-8 PM EST), email at support@acmecorp.com, or live chat (Monday-Saturday 9 AM-6 PM EST).",
+    "category": "order_tracking"
+  },
+  {
+    "query": "Does Acme Corp offer business accounts or accept purchase orders?",
+    "reference": "The knowledge base does not contain information about business accounts, corporate purchasing programs, or purchase order acceptance. The available payment methods are Visa, MasterCard, American Express, Discover, PayPal, Apple Pay, Google Pay, Acme Gift Cards, and Acme Pay Later for orders over $200.",
+    "category": "business_accounts"
+  },
+  {
+    "query": "How does the SmartHome Hub compare to competitors?",
+    "reference": "The Acme SmartHome Hub is priced at $149.99 and supports WiFi, Bluetooth, Zigbee, and Z-Wave protocols, compatible with over 10,000 devices. It features voice control, a 5-inch touchscreen, energy monitoring, and automated routines with a 2-year warranty. The knowledge base does not contain comparative information about competitor products.",
+    "category": "product_comparison"
+  }
+]

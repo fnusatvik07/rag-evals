@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RAG Evaluation Golden Dataset Schema",
+  "description": "Schema for validating golden evaluation datasets used in RAG pipeline evaluation",
+  "definitions": {
+    "basic_entry": {
+      "type": "object",
+      "required": ["query", "reference", "category"],
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 5,
+          "description": "The user query or question to evaluate against"
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 10,
+          "description": "The reference (ground truth) answer expected from the RAG system"
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Category label for grouping and filtering evaluation results"
+        }
+      },
+      "additionalProperties": false
+    },
+    "multihop_entry": {
+      "type": "object",
+      "required": ["query", "reference", "category", "source_documents"],
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 5,
+          "description": "A multi-hop question requiring information from multiple documents"
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 10,
+          "description": "The reference answer synthesized from multiple source documents"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["multi_hop"],
+          "description": "Category label, always 'multi_hop' for this dataset type"
+        },
+        "source_documents": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 2,
+          "description": "Array of document IDs from the knowledge base required to answer this question"
+        }
+      },
+      "additionalProperties": false
+    },
+    "conversation_turn": {
+      "type": "object",
+      "required": ["role", "content"],
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": ["user", "assistant"],
+          "description": "Role of the speaker in the conversation"
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The user's message (for user role)"
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The expected reference response (for assistant role)"
+        }
+      }
+    },
+    "conversation_entry": {
+      "type": "object",
+      "required": ["topic", "turns"],
+      "properties": {
+        "topic": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The topic or theme of the conversation"
+        },
+        "turns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/conversation_turn"
+          },
+          "minItems": 2,
+          "description": "Array of conversation turns alternating between user and assistant"
+        }
+      },
+      "additionalProperties": false
+    },
+    "knowledge_base_entry": {
+      "type": "object",
+      "required": ["id", "title", "content"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Unique document identifier"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Document title"
+        },
+        "content": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Full document content"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "title": "Basic/Adversarial Dataset",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/basic_entry"
+      },
+      "minItems": 1
+    },
+    {
+      "title": "Multi-hop Dataset",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/multihop_entry"
+      },
+      "minItems": 1
+    },
+    {
+      "title": "Conversational Dataset",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/conversation_entry"
+      },
+      "minItems": 1
+    },
+    {
+      "title": "Knowledge Base",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/knowledge_base_entry"
+      },
+      "minItems": 1
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "query": "If I buy 3 SmartHome Hubs with overnight shipping, what's the total cost?",
+    "reference": "Three SmartHome Hubs at $149.99 each would cost $449.97. Since the order total exceeds $50, standard shipping would be free. However, Overnight Shipping costs $24.99. The total would be $449.97 + $24.99 = $474.96. Note: since the order exceeds $200, Acme Pay Later would also be available to split this into 4 interest-free installments.",
+    "category": "multi_hop",
+    "source_documents": [7, 3, 10]
+  },
+  {
+    "query": "I bought an AirPure Pro 8 months ago and it stopped working. What are my options?",
+    "reference": "Since the AirPure Pro was purchased 8 months ago, it is still within the standard 1-year limited warranty period. You can make a warranty claim by providing proof of purchase and a description of the defect. The warranty covers defects in materials and workmanship under normal use. If the product is found to be defective, you should be covered. The 30-day return window has passed, but warranty coverage is your primary option. Contact customer support at 1-800-ACME-HELP, email support@acmecorp.com, or use live chat for assistance.",
+    "category": "multi_hop",
+    "source_documents": [8, 5, 6]
+  },
+  {
+    "query": "I'm a Gold loyalty member ordering an ErgoDesk Pro. What shipping benefits do I get?",
+    "reference": "As a Gold tier loyalty member (1000+ points/year), you receive free standard shipping on all orders (a benefit for all Acme Rewards members) and free expedited shipping (unlocked at Silver tier, 500+ points). Gold tier also adds priority customer support and exclusive product previews. For the ErgoDesk Pro at $599.99, you would save $12.99 on expedited shipping. Overnight shipping ($24.99) is not included as a free benefit at any tier level.",
+    "category": "multi_hop",
+    "source_documents": [11, 13, 3]
+  },
+  {
+    "query": "I want to buy a FitBand Ultra and a CloudStorage Premium annual plan. What's my total for the first year and how many loyalty points will I earn?",
+    "reference": "The FitBand Ultra costs $79.99. CloudStorage Premium is $12.99/month, but annual subscriptions save 20%, so the annual price would be $12.99 x 12 x 0.80 = $124.70 (approximately). The first-year total would be approximately $79.99 + $124.70 = $204.69. With the Acme Rewards program earning 1 point per dollar spent, you would earn approximately 204 points, which equals about $10 in future discounts (100 points = $5 off).",
+    "category": "multi_hop",
+    "source_documents": [9, 15, 11]
+  },
+  {
+    "query": "I ordered an ErgoDesk Pro but want to cancel. It's been 2 hours since I placed the order. What should I do?",
+    "reference": "Since 2 hours have passed, the 1-hour cancellation window has expired and the order may have entered the processing queue and might not be cancellable. You should contact customer support immediately at 1-800-ACME-HELP (Monday-Friday 8 AM-8 PM EST) or use live chat (Monday-Saturday 9 AM-6 PM EST) to check the order status. If the order has already shipped, it cannot be cancelled and you would need to use the standard 30-day return process. The ErgoDesk Pro is not marked as a custom or personalized item, so it should be eligible for return if needed.",
+    "category": "multi_hop",
+    "source_documents": [14, 6, 1, 13]
+  },
+  {
+    "query": "Can I use Acme Pay Later to buy a SmartHome Hub and have it shipped internationally?",
+    "reference": "Acme Pay Later requires a minimum order of $200, but the SmartHome Hub is priced at $149.99, which is below the threshold. You would not qualify for Acme Pay Later on this single item. You would need to add additional items to bring the order total above $200. Regarding international shipping, Acme Corp does ship internationally to over 50 countries with Standard (10-21 business days) and Express (5-7 business days) options, but international shipping costs vary by destination and customs duties/taxes are the customer's responsibility.",
+    "category": "multi_hop",
+    "source_documents": [10, 7, 4]
+  },
+  {
+    "query": "I received a defective SmartHome Hub. Can I get a replacement, and what warranty does the replacement have?",
+    "reference": "Since the SmartHome Hub is an electronic product, defective electronics can be exchanged for the same model within the first 90 days of purchase at no additional cost. The SmartHome Hub comes with a 2-year warranty (longer than the standard 1-year warranty). If you are within 90 days, contact customer support for an exchange. If you are past 90 days but within the 2-year warranty period, you can make a warranty claim by providing proof of purchase and a description of the defect.",
+    "category": "multi_hop",
+    "source_documents": [2, 7, 5]
+  },
+  {
+    "query": "I'm a new Acme Rewards member. If I buy an ErgoDesk Pro and an AirPure Pro, what tier will I reach and what benefits do I unlock?",
+    "reference": "The ErgoDesk Pro costs $599.99 and the AirPure Pro costs $299.99, for a total of $899.98. As an Acme Rewards member earning 1 point per dollar, you would earn approximately 899 points. This would place you in the Silver tier (500+ points/year), which unlocks free expedited shipping in addition to the base member benefits of early access to sales, 20% birthday discount, and free standard shipping. You would be 101 points short of Gold tier (1000+ points/year), which would add priority customer support and exclusive product previews.",
+    "category": "multi_hop",
+    "source_documents": [11, 13, 8]
+  },
+  {
+    "query": "I want to buy an AirPure Pro for a friend in Canada. What's the total cost with international express shipping and are there any additional fees I should know about?",
+    "reference": "The AirPure Pro costs $299.99. International Express Shipping takes 5-7 business days, but the exact cost varies by destination (Canada pricing is not specified in the knowledge base). Additionally, international orders may be subject to customs duties, taxes, and import fees which are the customer's responsibility. Acme Corp declares the full value of items on customs forms. Since the total will exceed $200, Acme Pay Later would be available as a payment option. The AirPure Pro comes with a 1-year limited warranty covering defects in materials and workmanship.",
+    "category": "multi_hop",
+    "source_documents": [8, 4, 10, 5]
+  },
+  {
+    "query": "I purchased a FitBand Ultra 10 days ago but want to return it and get an ErgoDesk Pro instead. What's the process and what's the price difference?",
+    "reference": "The FitBand Ultra is an electronic product, so it has a 15-day return window. Since you purchased it 10 days ago, you are still within the return period. You must return it with all original accessories, cables, manuals, and packaging. A 15% restocking fee may apply if the product has been opened, which would be $79.99 x 0.15 = $12.00 approximately. The refund would be processed within 5-7 business days. The ErgoDesk Pro costs $599.99, so the price difference from the FitBand Ultra ($79.99) is $520.00. If the restocking fee applies, you would effectively pay $532.00 more.",
+    "category": "multi_hop",
+    "source_documents": [2, 9, 13, 1]
+  }
+]

@@ -1,0 +1,47 @@
+# Core RAG Evaluation Frameworks
+deepeval>=3.0
+ragas>=0.2
+
+# LLM Providers
+openai>=1.0
+langchain>=0.3
+langchain-openai>=0.2
+langchain-community>=0.3
+
+# Vector Store & Embeddings
+qdrant-client>=1.9
+sentence-transformers>=3.0
+
+# Reranking
+cohere>=5.0
+
+# Data Processing
+pandas>=2.0
+numpy>=1.24
+
+# Document Loading
+pypdf>=4.0
+unstructured>=0.12
+
+# Jupyter
+jupyter>=1.0
+ipykernel>=6.0
+ipywidgets>=8.0
+
+# CLI & Config
+click>=8.0
+pyyaml>=6.0
+
+# Dashboard
+streamlit>=1.30
+
+# Visualization
+matplotlib>=3.7
+
+# Testing
+pytest>=7.0
+
+# Utilities
+python-dotenv>=1.0
+tqdm>=4.65
+datasets>=2.14

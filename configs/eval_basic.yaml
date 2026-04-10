@@ -1,0 +1,42 @@
+# Basic RAG Evaluation Configuration
+# Uses a focused subset of metrics from both RAGAS and DeepEval frameworks
+
+evaluation:
+  name: "basic_rag_eval"
+  description: "Basic evaluation with core metrics from RAGAS and DeepEval"
+  dataset: "data/golden_basic.json"
+  knowledge_base: "data/knowledge_base.json"
+
+ragas:
+  metrics:
+    - name: "faithfulness"
+      description: "Measures how factually consistent the answer is with the retrieved context"
+      threshold: 0.7
+    - name: "answer_relevancy"
+      description: "Measures how relevant the generated answer is to the given question"
+      threshold: 0.7
+    - name: "context_precision"
+      description: "Measures the precision of retrieved context against the ground truth"
+      threshold: 0.6
+
+deepeval:
+  metrics:
+    - name: "GEval"
+      description: "LLM-based evaluation of answer correctness using reference answers"
+      threshold: 0.7
+      parameters:
+        evaluation_criteria: "correctness"
+    - name: "FaithfulnessMetric"
+      description: "Measures whether the response is faithful to the retrieved context"
+      threshold: 0.7
+    - name: "AnswerRelevancyMetric"
+      description: "Measures relevancy of the generated answer to the input query"
+      threshold: 0.7
+
+settings:
+  llm_model: "gpt-4"
+  embedding_model: "text-embedding-3-small"
+  batch_size: 10
+  verbose: true
+  output_format: "json"
+  output_dir: "results/basic"
