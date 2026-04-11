@@ -49,3 +49,19 @@ qdrant_data/
 
 # DeepEval cache
 .deepeval/
+
+# Backup directories
+workbooks_backup/
+
+# Generated evaluation artifacts
+evaluation_results.png
+metric_correlations.png
+evaluation_report.md
+evaluation_results.csv
+experiment_results.csv
+baseline_scores.json
+
+# Synthesizer temp docs
+workbooks/data/synth_docs/
+workbooks/data/eval_dataset.json
+workbooks/data/eval_dataset.csv
